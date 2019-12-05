@@ -108,7 +108,7 @@ export const Toast: React.FC<ToastConfig & ToastInternalConfig> = ({
         testID="toast-touchable"
         style={{ ...StyleSheet.absoluteFillObject, flexDirection: 'row' }}
       >
-        <Accent testID="toast-accent" bg={isSuccess ? 'success' : 'error'} />
+        {/* <Accent testID="toast-accent" bg={isSuccess ? 'success' : 'error'} />
         <IconCont px={4}>
           <Icon
             size={20}
@@ -116,7 +116,7 @@ export const Toast: React.FC<ToastConfig & ToastInternalConfig> = ({
             name={isSuccess ? 'check-circle' : 'x-circle'}
             color={isSuccess ? 'success' : 'error'}
           />
-        </IconCont>
+        </IconCont> */}
         <Box flex={1} alignItems="flex-start">
           <Heading color={color}>{message}</Heading>
           {!!subMessage && (
@@ -126,11 +126,11 @@ export const Toast: React.FC<ToastConfig & ToastInternalConfig> = ({
           )}
         </Box>
       </TouchableOpacity>
-      <CloseButtonCont onPress={() => onClose && id && onClose(id)}>
+      {/* <CloseButtonCont onPress={() => onClose && id && onClose(id)}>
         <Box pl={1} p={2} borderRadius={closeButtonBorderRadius} mx={2} bg={closeButtonBgColor} alignItems="center">
           <Icon size={20} family="Feather" name="x" color={closeIconColor} />
         </Box>
-      </CloseButtonCont>
+      </CloseButtonCont> */}
     </StyledToast>
   )
 }
